@@ -4,6 +4,7 @@
 % an author if you want. 
 % Good luck on the final y'all
 
+
 function a = getAngle(num)
 % Author: Lucas Therrien/LazerWolf21
 % getAngle(), a simpler way of doing rad2deg(angle()) for phasors
@@ -30,3 +31,27 @@ function Par = par(x)
     end
     Par = Par^(-1);
 end
+
+function I = currDiv(current, evalElement, equiv)
+% Author: Lucas Therrien
+% currDiv(), function for current division
+% ex:
+%     I = 0.003;
+%     r1 = 5;
+%     req = 1.8333;
+%     I1 = currDiv(I, r1, req)
+    I = current*(equiv/evalElement);
+end
+
+function V = voltDiv(voltage, evalElement, equiv)
+% Author: Lucas Therrien
+% voltDiv(), function for voltage division
+% ex:
+%     V = 3;
+%     r1 = 5;
+%     req = 15;
+%     V1 = currDiv(V, r1, req)
+    V = voltage*(evalElement/equiv);
+end
+
+
